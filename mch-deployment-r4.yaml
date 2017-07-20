@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mch-deployment-r4
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: mch
+        env: stg
+        version: R4
+    spec:
+      containers:
+      - name: mch
+        image: tomcat
+        ports:
+        - containerPort: 8080
+

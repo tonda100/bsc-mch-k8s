@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mch-deployment-r5
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mch
+        env: stg
+        version: R5
+    spec:
+      containers:
+      - name: mch
+        image: jboss/wildfly
+        ports:
+        - containerPort: 8080
+
