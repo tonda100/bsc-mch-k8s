@@ -1,19 +1,19 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: mch-deployment-r4
+  name: mch-deployment-r5
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
         app: mch
         env: stg
-        version: R4
+        version: R5
     spec:
       containers:
       - name: mch
-        image: tomcat
+        image: tonda100/bsc:r5
         ports:
         - containerPort: 8080
 

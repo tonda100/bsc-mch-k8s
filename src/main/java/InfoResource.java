@@ -11,6 +11,6 @@ public class InfoResource {
 
     @GET
     public Response getInfo(){
-        return Response.ok().entity("VERSION FOUR\n").build();
+        return Response.ok().entity("VERSION FIVE\n").build();
     }
 }
